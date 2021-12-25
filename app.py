@@ -1,7 +1,7 @@
 print("Executado operadores aritméticos")
 
 numberOne = int(input("Digite um número:"))
-numberTwo = int(input("Digite um 2° números:"))
+numberTwo = int(input("Digite outro número:"))
 
 print("Operações disponíveis: ")
 print("1) Soma(+)")
@@ -33,4 +33,4 @@ elif calcOperation == '':
 else: 
     print("[OPERAÇÃO INVÁLIDA]")
     
-print(f'[FIM]- Resultado final foi: {valueTot}')    
+print(f'[FIM]- Resultado final foi: {valueTot}.')    
