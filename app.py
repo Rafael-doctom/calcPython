@@ -1,32 +1,30 @@
-print("Executado operadores aritméticos")
-
-numberOne = int(input("Digite um número:"))
-numberTwo = int(input("Digite outro número:"))
-
+print("------ Executado operadores aritméticos ------")
 print("Operações disponíveis: ")
 print("1) Soma(+)")
 print("2) Subtração(-)")
 print("3) Multiplicação(x)")
 print("4) Divisão(/)")
 
-calcOperation = int(input("Qual operação deseja realizar:"))
+numberOne = int(input("Digite um número:"))
+numberTwo = int(input("Digite outro número:"))
 
+calcOperation = input("Deseja realizar a operação? (S/N):")
 
-if calcOperation == '+' or '1' or 'soma' or 'Soma' or 'SOMA':
-    valueTot = numberOne + numberTwo
-    print(f'Resultado:{numberOne} + {numberTwo} = {valueTot}')
+if calcOperation != 'S':
+    print(f'{calcOperation} é uma opção inválida. Tente novamente!')
+else:
+    valueTotSum = numberOne + numberTwo
+    print(f'Resultado:{numberOne} + {numberTwo} = {valueTotSum}')
 
-elif calcOperation == '-' or '2' or 'menos' or 'MENOS':
-    valueTot = numberOne - numberTwo
-    print(f'Resultado:{numberOne} - {numberTwo} = {valueTot}')
+    valueTotSubtract = numberOne - numberTwo
+    print(f'Resultado:{numberOne} - {numberTwo} = {valueTotSubtract}')
 
-elif calcOperation == 'x' or '3' or 'vezes' or 'VEZES':
-    valueTot = numberOne * numberTwo
-    print(f'Resultado:{numberOne} * {numberTwo} = {valueTot}')
+    valueTotMulti = numberOne * numberTwo
+    print(f'Resultado:{numberOne} * {numberTwo} = {valueTotMulti}')
 
-elif calcOperation == '/' or '4' or 'divisao' or 'divisão' or 'DIVISAO' or 'DIVISÃO':
-    valueTot = numberOne / numberTwo
-    print(f'Resultado:{numberOne} / {numberTwo} = {valueTot}')
-
-
-print(f'[FIM]- Resultado final foi: {valueTot}.')
+    valueTotDiv = numberOne / numberTwo
+    print(f'Resultado:{numberOne} / {numberTwo} = {valueTotDiv}')
+    
+    valueTotMedia = (valueTotSum + valueTotSubtract + valueTotMulti + valueTotSum) /4
+    
+print(f'A média geral é: {valueTotMedia}')
